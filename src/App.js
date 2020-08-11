@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Row, Container} from 'react-bootstrap';
+
 import './App.css';
+
+import Media from './components/Media';
+import Soma from './components/Soma';
+import Sorteio from './components/Sorteio';
+import Intervalo from './components/Intervalo';
 
 function App() {
   return (
+     
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container fluid style={{padding: '48px'}}>
+        <Row style={{display: 'flex', flex: '1'}}>
+          
+            <Intervalo />
+
+        </Row>
+        <Row style={{display: 'flex', width: '100%'}}>
+        
+            <Media />
+        
+            <Soma />
+        
+            <Sorteio />
+        
+        </Row>
+      </Container>
     </div>
   );
 }
